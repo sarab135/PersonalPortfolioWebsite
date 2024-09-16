@@ -7,4 +7,5 @@ Sources:
 - https://www.youtube.com/watch?v=0YFrGy_mzjY
 - https://www.w3schools.com/html/html5_syntax.asp 
 - https://www.digitalocean.com/community/tutorials/how-to-create-and-link-to-additional-website-pages-with-html
+- https://github.com/shreya6360/Responsive-personal_portfolio
   
