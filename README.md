@@ -8,4 +8,5 @@ Sources:
 - https://www.w3schools.com/html/html5_syntax.asp 
 - https://www.digitalocean.com/community/tutorials/how-to-create-and-link-to-additional-website-pages-with-html
 - https://github.com/shreya6360/Responsive-personal_portfolio
+- https://www.youtube.com/watch?v=sCQwEVhCvTg&ab_channel=TechWithLucy
   
