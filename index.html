@@ -1,5 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>RESPONSIVE PERSONAL PORTFOLIO WEBSITE </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!--body-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello,</h3>
+                <h1>My name is Sara Bader</h1>
+                <h3>And I'm a <span class="multiple-text"></span></h3>
+                <div class="social-media">
+                    <a href="https://github.com/sarab135"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/sara-bader135"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+                <a href="C:\Users\sbade\OneDrive\workTerm2and3\-Co-op Resume--Saras_AcerNOADRESS.pdf" class="btn">Download CV</a>
+            </div>
+            <div class="home-img">
+                <img src="https://eranstiller.com/wp-content/uploads/2023/09/Software-Engineer-Skills-Becoming-a-Software-Developer.png" jsaction="" class="sFlh5c FyHeAf iPVvYb"  alt="76 Best Software Engineer Skills to Learn in 2023: Level Up!" jsname="kn3ccd" aria-hidden="false">
+                <!-- <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/10/computer_engineer-compare-page.jpg" alt=""> -->
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="https://wallpaperaccess.com/full/1385382.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About<span>Me</span></h2>
+                <h3>Software Engineering Student</h3>
+                <p>Still building all my skills, but open and willing to learn all sorts of new things. I have some ML experince, and now I want to try data, and data analytics. </p>
+                 <a href="#"class="btn">Read More</a>   
+            </div>
+        </section>
+        <section class="services"id="services">
+            <h2 class="heading">Our<span>Services</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Development</h3>
+                    <p>Motivated designer and developer
+                         with experience creating custom websites through CSS. 
+                         Strong collaboration skills.</p>
+                    <a href="#"class="btn">Read More</a>
+                </div>
+        
+                <div class="services-box">
+                    <i class='bx bx-crop' ></i>
+                    <h3>UI/UX Design</h3>
+                    <p>You cannot make a good design if you do not understand people; design is made for people.</p>
+                    <a href="#"class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio"id="portfolio">
+            <h2 class="heading">Latest<span>Project</span></h2>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="myproject/image/jan-vlacuha-Rns_A8bJ_dQ-unsplash.jpg"alt="">
+                    <div class="portfolio-layer">
+                        <h4>Personal Portfolio</h4>
+                        <p>In this project I try making my own portfolio website for myself. Showcase my projects, my social media handles, my experience on the website.</p>
+                        <a href="#"><i class='bx bx-link-external' ></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="myproject/image/austin-poon-JO_S6ewBqAk-unsplash.jpg"alt="">
+                    <div class="portfolio-layer">
+                        <h4>dynamics website Deployment in AWS</h4>
+                        <p>In this project I try deployed dynamics website in AWS.so that we can add deleted the data by connecting to databases.</p>
+                        <a href="#"><i class='bx bx-link-external' ></i></a>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <section class="contact"id="contact">
+            <h2 class="heading">Contact<span>ME!</span></h2>
+
+            <form action="#" name="submit-to-google-sheet">
+                <div class="input-box">
+                    <input type="text" name="Name" placeholder="Full Name">
+                    <input type="email" name="Email Address" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" name="Mobile Number"placeholder="Mobile Number">
+                    <input type="text"name="Email Subject" placeholder="Email Subject">
+                </div>
+                <textarea name="Your Message" id="" cols="30" rows="10"placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message"class="btn">
+            </form>
+            <span id="msg"></span>
+        </section>
+
+       
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="script.js"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzFPVGxI-75Ilkm2z_EMuI9ubPlp8-7dQmMzzdPiIunLPPzj3bcY1ohMdT_DfZ3zPwhTA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML="Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8"
     <meta http-equiv="X-UA-Comatible" content="IE=Edge">
@@ -13,7 +151,7 @@
         <nav>
             <img src="images/logo.png" class="logo">  
             <!-- width="200"> -->
-            <ul>
+            <!-- <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Projects</a></li>
@@ -22,7 +160,7 @@
         </nav>
         <div class="HeaderText">
             <p>Software Engineering student at University of Alberta</p>
-            <h0>Hi There! My name is Sara Bader </h0>
+            <h0>Hi There! My name is Sara Bader &#x2B50</h0>
         </div>
     </div>
 </div>
@@ -31,11 +169,13 @@
     <div class="container">
         <div class="row">
             <div class="About-col1">
-                <img src="images/Headshot.png">
+                <img src="images/comp.jpg"
+                width = "1000"
+                height = "666"/>
             </div>
             <div class="About-col2">
                 <p>About me:</p>
-                <h1> My name is Sara Bader, and I am currently persuing a Bachelor of Science in Computer Engineering Co-op - Software Option at the University of Alberta. The reason I chose this discipline, is becuase i get to see the results that my pwn fingers create. I was introducded to programing in ENCMP 100 during my first year...</h1>
+                <h1> My name is Sara Bader, and I am currently persuing a Bachelor of Science in Computer Engineering Co-op - Software Option at the University of Alberta.</h1>
             </div>
         </div>
     </div> 
@@ -44,4 +184,4 @@
 </div>
 
 </body>
-</html>
+</html> --> -->
